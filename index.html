@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Brew Haven — cozy coffee, calm space, and warm minimal design for students and young professionals."
+    />
+    <title>Brew Haven</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Alike&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav container" aria-label="Main navigation">
+        <a href="#home" class="brand" aria-label="Brew Haven home">
+          <span class="brand__mark" aria-hidden="true">
+            <svg viewBox="0 0 64 64" role="img" aria-label="Coffee cup icon">
+              <path d="M18 24h24c2.2 0 4 1.8 4 4v9c0 8.8-7.2 16-16 16h-4c-8.8 0-16-7.2-16-16v-9c0-2.2 1.8-4 4-4Z" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M46 28h4c3.3 0 6 2.7 6 6s-2.7 6-6 6h-4" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M20 18c2 0 3.5-1.4 4-3.2 1.1-3.6 4.2-6.1 7.9-6.1s6.8 2.5 7.9 6.1c.5 1.8 2 3.2 4 3.2" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+            </svg>
+          </span>
+          <span class="brand__text">Brew Haven</span>
+        </a>
+
+        <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <div class="nav-menu">
+          <a href="#about">About</a>
+          <a href="#menu">Menu</a>
+          <a href="#visit">Visit</a>
+          <a href="#reserve" class="button button--sm button--dark">Book a table</a>
+
+          <div class="auth-actions">
+            <button type="button" class="button button--sm button--ghost auth-trigger" data-auth="login">Log in</button>
+            <button type="button" class="button button--sm button--dark auth-trigger" data-auth="signup">Sign up</button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="auth-modal" id="authModal" aria-hidden="true">
+      <div class="auth-modal__backdrop" data-close-modal></div>
+      <div class="auth-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="authTitle">
+        <button class="auth-modal__close" type="button" aria-label="Close login form">×</button>
+
+        <div class="auth-modal__tabs" role="tablist" aria-label="Authentication tabs">
+          <button type="button" class="auth-tab is-active" data-auth-tab="login" aria-selected="true">Log in</button>
+          <button type="button" class="auth-tab" data-auth-tab="signup" aria-selected="false">Sign up</button>
+        </div>
+
+        <div class="auth-form-panel is-active" data-auth-panel="login">
+          <h3 id="authTitle">Welcome back</h3>
+          <form class="auth-form">
+            <label>
+              <span>Email</span>
+              <input type="email" placeholder="name@gmail.com" />
+            </label>
+            <label>
+              <span>Password</span>
+              <input type="password" placeholder="Enter your password" />
+            </label>
+            <button type="submit" class="button button--primary auth-submit">Log in</button>
+          </form>
+        </div>
+
+        <div class="auth-form-panel" data-auth-panel="signup">
+          <h3>Create your account</h3>
+          <form class="auth-form">
+            <label>
+              <span>Full name</span>
+              <input type="text" placeholder="Your name" />
+            </label>
+            <label>
+              <span>Email</span>
+              <input type="email" placeholder="name@gmail.com" />
+            </label>
+            <label>
+              <span>Password</span>
+              <input type="password" placeholder="Choose a password" />
+            </label>
+            <button type="submit" class="button button--primary auth-submit">Sign up</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="container hero__grid">
+          <div class="hero__content">
+            <p class="eyebrow">Welcome to my new cafe! A warm place to stay and chat!</p>
+            <h1>Simple coffee. Cozy energy. Beautiful mornings.</h1>
+            <p class="lead">
+              A place where cozy, simple space meets the warm, gentle comfort of a freshly
+              poured pure, fine coffee. Try coffee and chat with your friends here.
+            </p>
+
+            <div class="hero__actions">
+              <a href="#menu" class="button button--primary">Order now</a>
+              <a href="#about" class="button button--ghost">Explore more</a>
+            </div>
+
+            <div class="hero__cta-banner">
+              “Wi‑Fi? No problem! Nothing extra. Just pure coffee with ₱20!”
+            </div>
+          </div>
+
+          <div class="hero__visual" aria-label="Coffee shop image">
+            <div class="coffee-card">
+              <div class="coffee-card__label">Today's pour</div>
+              <div class="coffee-card__coffee">
+                <img
+                  class="coffee-photo"
+                  src="https://images.unsplash.com/photo-1497636577773-f1231844b336?auto=format&fit=crop&w=900&q=80"
+                  alt="A real cup of coffee on a cafe table"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="feature-strip">
+        <div class="container feature-grid">
+          <article>
+            <span>01</span>
+            <h3>Pure coffee</h3>
+            <p>Single-brewed cups made to feel smooth, rich, and comforting.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Minimal vibe</h3>
+            <p>Warm neutrals, calm corners, and enough quiet to stay present.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Good company</h3>
+            <p>Perfect as a study spot, catch-up corner, or creative pause.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section menu" id="menu">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Our favorites</p>
+            <h2>Fresh pours for every mood.</h2>
+          </div>
+
+          <div class="menu-grid">
+            <article class="menu-card menu-card--featured">
+              <div class="menu-card__top">
+                <span class="tag">Signature</span>
+                <span class="price">₱120</span>
+              </div>
+              <h3>Minimal Latte</h3>
+              <p>Silky espresso with velvety milk and a soft caramel finish.</p>
+            </article>
+
+            <article class="menu-card">
+              <div class="menu-card__top">
+                <span class="tag">Classic</span>
+                <span class="price">₱90</span>
+              </div>
+              <h3>Americano</h3>
+              <p>Bold and smooth for slow mornings and steady afternoons.</p>
+            </article>
+
+            <article class="menu-card">
+              <div class="menu-card__top">
+                <span class="tag">Sweet</span>
+                <span class="price">₱140</span>
+              </div>
+              <h3>Vanilla Cloud</h3>
+              <p>Soft foam, sweet cream, and a little café magic.</p>
+            </article>
+
+            <article class="menu-card">
+              <div class="menu-card__top">
+                <span class="tag">Cold</span>
+                <span class="price">₱110</span>
+              </div>
+              <h3>Cold Brew</h3>
+              <p>Clean, bright, and refreshing for your midday reset.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section story" id="about">
+        <div class="container story__grid">
+          <div class="story__copy">
+            <p class="eyebrow">Why people stay</p>
+            <h2>Built for conversations, study sessions, and slow mornings.</h2>
+            <p>
+              We imagined a coffee shop that feels easy on the eyes and comforting in the heart.
+              Every corner is designed for students and young professionals seeking a calm and
+              productive place to be.
+            </p>
+            <p>
+              From a quick caffeine fix to hours of chatting with friends, Brew Haven is a
+              warm home away from home.
+            </p>
+          </div>
+
+          <div class="story__cards">
+            <article class="info-card">
+              <strong>Student friendly</strong>
+              <p>Quiet corners, comfortable seating, and enough room to focus.</p>
+            </article>
+            <article class="info-card info-card--accent">
+              <strong>Young professional energy</strong>
+              <p>Warm light, smooth coffee, and ideas that flow naturally.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section visit" id="visit">
+        <div class="container visit__grid">
+          <div class="visit-card">
+            <p class="eyebrow">Find us</p>
+            <h3>Brew Haven</h3>
+            <ul>
+              <li>Calamba, Laguna</li>
+              <li>Open daily: 7:00 AM – 10:00 PM</li>
+              <li>Call: +63 912 345 6789</li>
+            </ul>
+          </div>
+
+          <div class="visit-card visit-card--dark">
+            <p class="eyebrow">Special offer</p>
+            <h3>Pure coffee for just ₱20</h3>
+            <p>Simple, convenient, and made to keep your day easy.</p>
+            <a href="#reserve" class="button button--light">Visit today</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section cta" id="reserve">
+        <div class="container cta__panel">
+          <div>
+            <p class="eyebrow">Come by anytime</p>
+            <h2>Bring your friends. Stay for the coffee.</h2>
+          </div>
+          <a href="#home" class="button button--primary">Plan your visit</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer__inner">
+        <p>© <span id="year"></span> J.D. Company</p>
+        <p>Cozy simple living, one cup at a time.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
