@@ -567,6 +567,60 @@ p {
   color: rgba(255,255,255,0.8);
 }
 
+.banner-ad-wrap {
+  padding-top: 0;
+  padding-bottom: 12px;
+}
+
+.banner-ad__slot {
+  display: flex;
+  justify-content: center;
+}
+
+.banner-ad__inner {
+  width: 336px;
+  height: 280px;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 24px 22px;
+  border-radius: 26px;
+  background: linear-gradient(135deg, rgba(89, 63, 52, 0.12), rgba(255,255,255,0.48));
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+}
+
+.banner-ad__tag {
+  display: inline-flex;
+  padding: 0.5rem 0.8rem;
+  border-radius: 999px;
+  background: rgba(31, 23, 21, 0.08);
+  color: var(--brown);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.banner-ad__inner h3 {
+  margin-bottom: 0;
+  font-size: 2rem;
+  line-height: 1.05;
+  letter-spacing: -0.05em;
+}
+
+.banner-ad__inner p {
+  margin-bottom: 0;
+  color: var(--muted);
+}
+
+.banner-ad__inner .button {
+  margin-top: 8px;
+}
+
 .cta__panel {
   display: flex;
   align-items: center;
@@ -751,6 +805,11 @@ p {
   .feature-grid,
   .menu-grid {
     grid-template-columns: 1fr;
+  }
+
+  .banner-ad__inner {
+    width: min(336px, 100%);
+    height: 280px;
   }
 
   .cta__panel,
